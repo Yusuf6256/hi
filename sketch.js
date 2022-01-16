@@ -92,7 +92,7 @@ function setup()
 
 function draw()
 {
-
+if (gameState==="play"){
 
     background('blue')
     Enemy()
@@ -187,6 +187,8 @@ function draw()
         hp = hp -30
         enemy.bounceOff(boy)
     }
+}
+
 
     /*if(enemy_hp <= 0)
     {
@@ -195,7 +197,7 @@ function draw()
     }*/
     
     //if(enemy_hp < 0)
-
+    if (gameState==="end"){
     if(hp <= 0 )
     {
         boy.velocityY = 0
@@ -212,7 +214,7 @@ function draw()
         mp = 100
         enemy_killed = 0
     }
-
+}
     drawSprites()
 
     
